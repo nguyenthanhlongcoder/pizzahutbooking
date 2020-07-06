@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PizzaHut Booking</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_order">Order</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_account">Account</string>
+    <string name="order_title">For Ordering</string>
+    <string name="notification_title">Notification</string>
+    <string name="account_home">Your Account</string>
+</resources>

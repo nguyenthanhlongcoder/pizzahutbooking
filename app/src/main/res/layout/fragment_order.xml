@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbarAlwaysDrawHorizontalTrack="true"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="@string/order_title"
+        android:textAlignment="center"
+        />
+
+    <GridView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:numColumns="3"
+        android:id="@+id/grid_view_order">
+
+    </GridView>
+
+</LinearLayout>
