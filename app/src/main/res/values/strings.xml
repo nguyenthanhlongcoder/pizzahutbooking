@@ -7,4 +7,10 @@
     <string name="order_title">For Ordering</string>
     <string name="notification_title">Notification</string>
     <string name="account_home">Your Account</string>
+    <string name="appertizers_title">Appertizers</string>
+    <string name="salad_title">Salad</string>
+    <string name="soup_title">Soup</string>
+    <string name="rice_title">Rice</string>
+    <string name="spagetti_title">Spagetti</string>
+    <string name="drink_title">Drink</string>
 </resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "22621345148",
+    "firebase_url": "https://pizzahut-booking.firebaseio.com",
+    "project_id": "pizzahut-booking",
+    "storage_bucket": "pizzahut-booking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22621345148:android:664e66d48e2240e01240f9",
+        "android_client_info": {
+          "package_name": "com.anhlang.pizzahutbooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "22621345148-p93pj9cbs7tkvn8ve3mofrtsspd5fvf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYsYPfhiKTRVMaPPtBnsAAnmzFznxO9ZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "22621345148-p93pj9cbs7tkvn8ve3mofrtsspd5fvf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -40,6 +40,7 @@ public class OrderFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getContext(), OrderActivity.class);
+
                 startActivity(intent);
             }
         });
