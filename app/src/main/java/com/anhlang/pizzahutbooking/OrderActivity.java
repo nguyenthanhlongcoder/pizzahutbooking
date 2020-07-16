@@ -1,9 +1,15 @@
 package com.anhlang.pizzahutbooking;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -20,6 +26,8 @@ public class OrderActivity extends AppCompatActivity {
     private DrinkFragment drinkFragment ;
     private AppertizersFragment appertizersFragment;
 
+    private Toolbar toolbar;
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +36,20 @@ public class OrderActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout);
 
         viewPager = findViewById(R.id.viewPager);
+
+        toolbar = findViewById(R.id.toolbar);
+
+        Intent intent = getIntent();
+
+        toolbar.setTitle("order for " +intent.getStringExtra("table name"));
+
+        toolbar.setNavigationIcon(R.drawable.ic_baseline_keyboard_backspace_24);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         pizzaFragment = new PizzaFragment();
         spaghettiAndRiceFragment = new SpaghettiAndRiceFragment();
@@ -44,9 +66,6 @@ public class OrderActivity extends AppCompatActivity {
         viewPagerAdapter.addFragment(drinkFragment, "DRINK");
 
         viewPager.setAdapter(viewPagerAdapter);
-
-
-
 
     }
 }
