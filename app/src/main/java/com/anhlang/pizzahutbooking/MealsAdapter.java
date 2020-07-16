@@ -69,5 +69,9 @@ public class MealsAdapter extends BaseAdapter {
         Glide.with(context).load(mealsList.get(i).getPicture()).centerCrop().error(R.drawable.a1_table).into(picture);
         return rowView;
     }
+
+    private  void viewHolder(){
+
+    }
 }
 

@@ -7,13 +7,14 @@
     android:orientation="vertical"
     tools:context=".OrderActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:titleTextColor="@color/colorBackground"
+        android:titleTextAppearance="@style/ToolBarTitle"
+        />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"

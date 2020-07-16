@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,6 +24,8 @@ public class OrderFragment extends Fragment {
             R.drawable.b1_table, R.drawable.b2_table, R.drawable.b3_table,
             R.drawable.c1_table, R.drawable.c2_table, R.drawable.c3_table,
             R.drawable.d1_table, R.drawable.d2_table, R.drawable.d3_table};
+
+    String[] positionName = {"A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "C3", "D1", "D2", "D3"};
 
     @Nullable
     @Override
@@ -40,7 +43,7 @@ public class OrderFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getContext(), OrderActivity.class);
-
+                intent.putExtra("table name", positionName[i]);
                 startActivity(intent);
             }
         });
