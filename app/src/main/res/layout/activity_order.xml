@@ -14,7 +14,24 @@
         android:background="@color/colorPrimary"
         android:titleTextColor="@color/colorBackground"
         android:titleTextAppearance="@style/ToolBarTitle"
-        />
+        >
+
+            <ru.nikartm.support.ImageBadgeView
+                android:id="@+id/btn_cart"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="right"
+                app:ibv_badgeValue="0"
+                app:ibv_badgePosition="top_right"
+                app:ibv_badgeTextSize="10sp"
+                app:ibv_fixedBadgeRadius="10dp"
+                app:ibv_badgeTextStyle="bold"
+                app:ibv_badgeTextColor="#ffffff"
+                app:ibv_badgeColor="#E14C38"
+                app:ibv_badgeLimitValue="false"
+                android:src="@drawable/ic_baseline_shopping_cart_24" />
+    </Toolbar>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -22,44 +39,12 @@
         android:layout_height="wrap_content"
         app:tabMode="scrollable"
         app:tabIndicatorColor="@color/colorPrimary">
-
-        <com.google.android.material.tabs.TabItem
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text="Pizza"
-            />
-
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:text="@string/appertizers_title" />-->
-
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:text="@string/salad_title" />-->
-
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:text="@string/soup_title" />-->
-
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:text="@string/rice_title" />-->
-
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:text="@string/spagetti_title" />-->
-
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:text="@string/drink_title" />-->
-
     </com.google.android.material.tabs.TabLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tab_layout"
+        android:background="#EAE9E9" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"

@@ -5,4 +5,6 @@
     <color name="colorAccent">#D81B60</color>
     <color name="colorPizzaHut">#E51120</color>
     <color name="colorBackground">#ffffff</color>
+    <color name="colorShadow">#959494</color>
+    <color name="colorDivider">#F3F1F1</color>
 </resources>

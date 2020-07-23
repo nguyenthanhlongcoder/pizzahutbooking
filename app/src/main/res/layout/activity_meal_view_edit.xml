@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MealViewEdit">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txt_mealName_edit"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:gravity="left"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/txt_mealPrice_edit"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="right"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/colorDivider"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/colorDivider"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:textSize="20sp"
+                android:text="Special Introductions"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E.g. No onions, please"
+                android:padding="10dp"
+                android:id="@+id/edt_note_edit"
+                android:textColorHighlight="@color/colorPrimary"
+                android:layout_margin="10dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="20dp"
+                >
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="-"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="40sp"
+                    android:gravity="center"
+                    android:id="@+id/btn_minus_edit"
+                    android:background="@drawable/custom_button"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="35sp"
+                    android:id="@+id/txt_count_edit"
+                    android:layout_marginHorizontal="20dp"
+                    />
+
+                <Button
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="+"
+                    android:id="@+id/btn_plus_edit"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="40sp"
+                    android:background="@drawable/custom_button"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/colorDivider"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Item"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:id="@+id/btn_update"
+                android:layout_margin="20dp"
+                android:background="@color/colorPrimary"
+                android:textColor="@color/colorBackground"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

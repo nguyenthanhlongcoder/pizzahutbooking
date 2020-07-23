@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -46,7 +47,6 @@ public class AppertizersFragment extends Fragment {
                     Meals meal = dataSnapshot.getValue(Meals.class);
 
                     mealsArrayList.add(meal);
-
                 }
 
                 mealsAdapter = new MealsAdapter(
@@ -61,6 +61,16 @@ public class AppertizersFragment extends Fragment {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+
+        ls_appertizers.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mealsAdapter.viewMeal(mealsArrayList.get(position).getName(),
+                        mealsArrayList.get(position).getPrice(),
+                        mealsArrayList.get(position).getDescription(),
+                        mealsArrayList.get(position).getPicture());
             }
         });
         return  view;

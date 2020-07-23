@@ -14,8 +14,7 @@
         android:title="for Ordering"
         android:titleTextAppearance="@style/ToolBarTitle"
         android:background="@color/colorPrimary"
-        android:titleTextColor="@color/colorBackground"
-        />
+        android:titleTextColor="@color/colorBackground"/>
 
     <GridView
         android:layout_height="wrap_content"
