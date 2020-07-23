@@ -1,9 +1,11 @@
 package com.anhlang.pizzahutbooking;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -18,8 +20,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.zip.Inflater;
 
 public class PizzaFragment extends Fragment {
 
@@ -30,7 +30,6 @@ public class PizzaFragment extends Fragment {
     MealsAdapter mealsAdapter;
 
     ListView ls_pizza;
-
 
     @Nullable
     @Override
@@ -43,15 +42,16 @@ public class PizzaFragment extends Fragment {
 
         reference = FirebaseDatabase.getInstance().getReference().child("MEALS").child("PIZZA");
 
+
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    Log.d("LOG", dataSnapshot.toString());
+
                     Meals meal = dataSnapshot.getValue(Meals.class);
 
                     mealsArrayList.add(meal);
-
-
                 }
 
                 mealsAdapter = new MealsAdapter(
@@ -68,6 +68,17 @@ public class PizzaFragment extends Fragment {
 
             }
         });
+
+        ls_pizza.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                mealsAdapter.viewMeal(mealsArrayList.get(position).getName(),
+                                    mealsArrayList.get(position).getPrice(),
+                                    mealsArrayList.get(position).getDescription(),
+                                    mealsArrayList.get(position).getPicture());
+            }
+        });
+
         return  view;
     }
 }

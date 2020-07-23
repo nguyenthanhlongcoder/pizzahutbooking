@@ -1,6 +1,7 @@
 package com.anhlang.pizzahutbooking;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.text.Layout;
 import android.view.LayoutInflater;
@@ -67,11 +68,19 @@ public class MealsAdapter extends BaseAdapter {
         description.setText(mealsList.get(i).getDescription());
 
         Glide.with(context).load(mealsList.get(i).getPicture()).centerCrop().error(R.drawable.a1_table).into(picture);
+
         return rowView;
     }
 
-    private  void viewHolder(){
+    public void viewMeal(String name, String price, String description, String picture){
+        Intent intent = new Intent(context, MealView.class);
 
+        intent.putExtra("name", name);
+        intent.putExtra("price", price);
+        intent.putExtra("description", description);
+        intent.putExtra("picture", picture);
+
+        context.startActivity(intent);
     }
 }
 

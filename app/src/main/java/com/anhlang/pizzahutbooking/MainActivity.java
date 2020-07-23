@@ -28,11 +28,8 @@ public class MainActivity extends AppCompatActivity {
         badgeDrawable.setVisible(true);
         badgeDrawable.setNumber(99);
 
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
-        myRef.setValue("Hello, World!");
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
