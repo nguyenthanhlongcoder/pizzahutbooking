@@ -2,9 +2,11 @@
 <resources>
     <color name="colorPrimary">#01b14f</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#01b14f</color>
     <color name="colorPizzaHut">#E51120</color>
     <color name="colorBackground">#ffffff</color>
     <color name="colorShadow">#959494</color>
     <color name="colorDivider">#F3F1F1</color>
+    <color name="colorRed">#E14C38</color>
+    <color name="colorTextDefault">#808080</color>
 </resources>

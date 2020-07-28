@@ -11,11 +11,18 @@
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:title="for Ordering"
+        android:title="@string/order_title"
+        android:id="@+id/toolbar_order"
         android:titleTextAppearance="@style/ToolBarTitle"
         android:background="@color/colorPrimary"
         android:titleTextColor="@color/colorBackground"/>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDC8C7C7"
+        android:layout_below="@+id/toolbar_order"
+        />
     <GridView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"

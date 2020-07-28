@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MealsCartActivity">
+    tools:context=".Activity.MealsCartActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Order summary"
+            android:text="@string/order_summary"
             android:textSize="20sp"
             android:textColor="@color/colorShadow"
             android:textStyle="bold"/>
@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add items"
+            android:text="@string/add_items"
             android:gravity="right"
             android:id="@+id/btn_add_items"
             android:textColor="@color/colorPrimary"
@@ -64,7 +64,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Subtotal"
+            android:text="@string/subtotal"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_confirm_order"
-            android:text="Confirm Order"
+            android:text="@string/confirm_order"
             android:textSize="25sp"
             android:textColor="@color/colorBackground"
             android:background="@color/colorPrimary"

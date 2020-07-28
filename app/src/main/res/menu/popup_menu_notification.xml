@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="@string/mark_read_all"
+        android:id="@+id/mark_read_all"
+        android:icon="@drawable/ic_baseline_check_24"/>
+
+    <item
+        android:title="@string/notification_settings"
+        android:id="@+id/notification_setting"
+        android:icon="@drawable/ic_baseline_settings_24"
+        />
+</menu>

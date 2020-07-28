@@ -4,8 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
     android:layout_height="match_parent"
-    tools:context=".MealView">
+    tools:context=".Activity.MealView">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -13,12 +16,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <ImageView
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:id="@+id/img_meal"
-                android:scaleType="centerCrop"
-                />
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_meal"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_margin="5dp"
+                    android:id="@+id/btn_back_menu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:civ_border_color="#B5B3B3"
+                    android:background="#72B5B3B3"
+                    app:civ_border_width="1dp"
+                    android:src="@drawable/ic_baseline_clear_24"
+                    app:layout_constraintTop_toTopOf="@+id/img_meal"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -52,7 +77,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="About this meal"
+                android:text="@string/about_this_meal"
                 android:textStyle="bold"
                 android:textSize="20sp"
                 android:padding="10dp"
@@ -75,12 +100,12 @@
                 android:textStyle="bold"
                 android:padding="10dp"
                 android:textSize="20sp"
-                android:text="Special Introductions"/>
+                android:text="@string/special_introductions"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="E.g. No onions, please"
+                android:hint="@string/e.g"
                 android:padding="10dp"
                 android:id="@+id/edt_note"
                 android:textColorHighlight="@color/colorPrimary"
@@ -136,7 +161,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add to Cart"
+                android:text="@string/add_to_cart"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:id="@+id/btn_add"

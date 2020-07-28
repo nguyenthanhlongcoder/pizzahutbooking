@@ -3,9 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:clickable="true"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".MealViewEdit">
+    tools:context=".Activity.MealViewEdit">
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -54,12 +57,12 @@
                 android:textStyle="bold"
                 android:padding="10dp"
                 android:textSize="20sp"
-                android:text="Special Introductions"/>
+                android:text="@string/special_introductions"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="E.g. No onions, please"
+                android:hint="@string/e.g"
                 android:padding="10dp"
                 android:id="@+id/edt_note_edit"
                 android:textColorHighlight="@color/colorPrimary"
@@ -115,7 +118,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Update Item"
+                android:text="@string/update_item"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:id="@+id/btn_update"

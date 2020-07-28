@@ -15,13 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MealViewEdit"></activity>
-        <activity android:name=".MealsCartActivity" />
-        <activity android:name=".MealView" />
-        <activity android:name=".LoginScreen" />
-        <activity android:name=".OrderActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".Activity.MealViewEdit"></activity>
+        <activity android:name=".Activity.MealsCartActivity" />
+        <activity android:name=".Activity.MealView" />
+        <activity android:name=".Activity.LoginScreen" />
+        <activity android:name=".Activity.OrderActivity" />
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
