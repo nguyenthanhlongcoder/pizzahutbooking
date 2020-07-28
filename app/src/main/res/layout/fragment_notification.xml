@@ -1,13 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorBackground"
-    >
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fragment Notification"
-        android:layout_centerInParent="true"
-        android:textSize="30sp"/>
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBackground"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:text="@string/notification_title"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:scaleType="fitEnd"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_more"
+            android:src="@drawable/ic_baseline_more_vert_24"/>
+
+    </Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EAE9E9" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:scrollbars="none"
+        >
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleLine="true"
+            app:singleSelection="false"
+            android:id="@+id/chip_group">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:textEndPadding="10dp"
+                app:checkedIcon="@drawable/ic_baseline_check_24_white"
+                app:textStartPadding="10dp"
+                android:text="@string/all"
+                android:id="@+id/chip_all"
+                android:checked="true"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:textEndPadding="10dp"
+                app:textStartPadding="10dp"
+                android:id="@+id/chip_watched"
+                app:checkedIcon="@drawable/ic_baseline_check_24_white"
+                android:text="@string/watched"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:textEndPadding="10dp"
+                app:textStartPadding="10dp"
+                android:id="@+id/chip_watching"
+                app:checkedIcon="@drawable/ic_baseline_check_24_white"
+                android:text="@string/watching"/>
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:textEndPadding="10dp"
+                app:textStartPadding="10dp"
+                android:text="@string/ordered"
+                android:id="@+id/chip_ordered"
+                app:checkedIcon="@drawable/ic_baseline_check_24_white"
+                />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:textEndPadding="10dp"
+                app:textStartPadding="10dp"
+                android:text="@string/removed"
+                android:id="@+id/chip_removed"
+                app:checkedIcon="@drawable/ic_baseline_check_24_white"
+                />
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EAE9E9" />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ls_notification"
+        android:padding="5dp"
+        />
+
+</LinearLayout>

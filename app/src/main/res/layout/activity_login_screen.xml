@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:padding="15dp"
-    tools:context=".LoginScreen">
+    tools:context=".Activity.LoginScreen">
 
     <ImageView
         android:layout_width="200dp"
@@ -27,7 +27,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Please login"
+        android:text="@string/please_login"
         android:textSize="20sp"
         android:textStyle="italic"
         android:paddingHorizontal="15dp"
@@ -45,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/username"
-            android:hint="Username"
+            android:hint="@string/username"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -60,7 +60,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/password"
-            android:hint="Password"
+            android:hint="@string/password"
             app:passwordToggleEnabled="true"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
@@ -77,10 +77,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_signin"
             android:textColor="@color/colorBackground"
-            android:text="Sign In"
+            android:text="@string/sign_in"
             android:background="@color/colorPrimary"
             android:padding="5dp"
-            android:onClick="loginUser"
             android:layout_marginTop="20dp"
             android:textSize="30sp"/>
 

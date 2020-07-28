@@ -5,11 +5,24 @@
     android:background="@color/colorBackground"
     android:orientation="vertical"
     >
-
     <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
+        android:layout_gravity="center"
+        android:id="@+id/toolbar_home"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_white_png"/>
+    </Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDC8C7C7"
+        android:layout_below="@+id/toolbar_home"
         />
 
     <GridView

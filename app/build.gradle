@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -29,11 +29,12 @@ dependencies {
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'com.github.nikartm:image-support:1.0.5'
     implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation 'androidx.gridlayout:gridlayout:1.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
 
-apply plugin: 'com.google.gms.google-services'

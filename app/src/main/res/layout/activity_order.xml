@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".OrderActivity">
+    tools:context=".Activity.OrderActivity">
 
     <Toolbar
         android:layout_width="match_parent"
@@ -25,13 +25,18 @@
                 app:ibv_badgeValue="0"
                 app:ibv_badgePosition="top_right"
                 app:ibv_badgeTextSize="10sp"
-                app:ibv_fixedBadgeRadius="10dp"
+                app:ibv_fixedBadgeRadius="9dp"
                 app:ibv_badgeTextStyle="bold"
                 app:ibv_badgeTextColor="#ffffff"
                 app:ibv_badgeColor="#E14C38"
                 app:ibv_badgeLimitValue="false"
                 android:src="@drawable/ic_baseline_shopping_cart_24" />
     </Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EAE9E9" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
