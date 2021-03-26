@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:theme="@style/Theme.MaterialComponents"
     android:layout_height="match_parent"
     tools:context=".Activity.MainActivity">
 
@@ -18,6 +19,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@color/colorPrimary"
         app:menu="@menu/bottom_navigation"
         android:background="@color/colorBackground"
         />

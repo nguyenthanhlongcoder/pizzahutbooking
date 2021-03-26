@@ -1,5 +1,6 @@
 package com.anhlang.pizzahutbooking.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.anhlang.pizzahutbooking.Activity.LoginScreen;
 import com.anhlang.pizzahutbooking.R;
 import com.bumptech.glide.Glide;
 
@@ -38,7 +40,9 @@ public class AccountFragment extends Fragment {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getActivity().finish();
+                Intent intent = new Intent(getContext(), LoginScreen.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
 

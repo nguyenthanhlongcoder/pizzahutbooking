@@ -159,7 +159,7 @@ public class MealsCartAdapter extends BaseAdapter {
                         Button positive = dialogView.findViewById(R.id.btn_positive_2);
 
                         title.setText(context.getResources().getString(R.string.manger_permission));
-                        content.setText(context.getResources().getString(R.string.manger_permission));
+                        content.setText(context.getResources().getString(R.string.manager_permission_content));
                         final AlertDialog alertDialog = dialogBuilder.create();
 
                         alertDialog.show();
